@@ -32,6 +32,7 @@ const generateProjects = projectsArr => {
                     `;
                 })
                 .join('')}
+
             ${projectsArr
                 .filter(({ feature }) => !feature)
                 .map(({ name, description, languages, link }) => {
@@ -53,10 +54,7 @@ const generateProjects = projectsArr => {
     `;
 };
 
-    
-  
-  
-
+// export function to generate page
 module.exports = templateData => {
     console.log(templateData);
     // destructure projects and about data from templateData based on their property key names
@@ -98,3 +96,4 @@ module.exports = templateData => {
     </html>
     `;
 };
+  
